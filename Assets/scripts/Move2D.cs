@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Move2D : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float Movspeed;
-    public float HorizontalMov;
-   
+    [SerializeField]
+    private Rigidbody2D rb;
+    public float movSpeed;
+    private float horizontalMov;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,11 +16,12 @@ public class Move2D : MonoBehaviour
     
     void FixedUpdate()
     {
-        var horizontalVelocity = HorizontalMov * Movspeed;
+        var horizontalVelocity = horizontalMov * movSpeed;
+        rb.velocity = new Vector2(horizontalVelocity,0);
     }
-    public void OnHorizontal(InputValue val)
+    public void OnMove(InputValue val)
     {
-        HorizontalMov = val.Get<float>();
+        horizontalMov = val.Get<float>();
         Debug.Log("Horizontal");
     }
 }
