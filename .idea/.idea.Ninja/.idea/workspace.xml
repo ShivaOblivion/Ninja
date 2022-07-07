@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Ninja2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Ninja2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Ninja2.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Ninja2.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
-    </list>
+    <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +80,7 @@
       <workItem from="1656186124417" duration="6744000" />
       <workItem from="1656274025592" duration="4680000" />
       <workItem from="1657029394331" duration="5712000" />
-      <workItem from="1657129823677" duration="17864000" />
+      <workItem from="1657129823677" duration="18185000" />
     </task>
     <servers />
   </component>
