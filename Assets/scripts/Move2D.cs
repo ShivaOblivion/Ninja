@@ -17,7 +17,8 @@ public class Move2D : MonoBehaviour
     void FixedUpdate()
     {
         var horizontalVelocity = horizontalMov * movSpeed;
-        rb.velocity = new Vector2(horizontalVelocity,0);
+        var verticalVelocity = rb.velocity.y;
+        rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
     }
     public void OnMove(InputValue val)
     {

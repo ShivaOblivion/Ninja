@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21299664}
   - component: {fileID: 21299663}
+  - component: {fileID: 21299667}
   - component: {fileID: 21299662}
   - component: {fileID: 21299661}
   - component: {fileID: 21299665}
@@ -159,7 +160,7 @@ Rigidbody2D:
   m_Mass: 2.25
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  movSpeed: 11
+  movSpeed: 30
 --- !u!212 &21299663
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -302,6 +303,25 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &21299667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21299660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7d81bd10e68014fa81619e4f16038e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 50
+  groundCheckRadius: 0.249
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  feet: {fileID: 21299664}
+  rb2D: {fileID: 21299661}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

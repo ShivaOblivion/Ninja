@@ -61,7 +61,7 @@ public partial class @Ninja2 : IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -189,10 +189,10 @@ public partial class @Ninja2 : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""511104bd-c45d-4783-be21-e837b7cb30ae"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
