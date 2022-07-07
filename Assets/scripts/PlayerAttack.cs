@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     public LayerMask whatIsEnemies;
     
-    private void Update()
+    private void OnAttack()
     {
         if (timeBtwAttack <= 0)
         {
@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
                 enemiesToDamoge[i].GetComponent<EnemyHealth>().TakeDamage(damage);
             }
             timeBtwAttack = statTimeBtwAttack;
-            
+            Debug.Log("ez1v9");
         }
         else
         {
