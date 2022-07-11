@@ -6,11 +6,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health;
-    public GameObject enemy;
-    public void Awake()
-    {
-        enemy = GetComponent<GameObject>();
-    }
 
     private void Update()
     {
@@ -18,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     
         {
             gameObject.SetActive(false);
-            Debug.Log("JeSuisMort");
+            Debug.Log("JeSuisMortX_X");
         }
     }
 

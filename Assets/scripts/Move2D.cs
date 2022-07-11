@@ -1,28 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Move2D : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     public float movSpeed;
-    private float horizontalMov;
+    private float _stickDirection;
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
     
     void FixedUpdate()
     {
-        var horizontalVelocity = horizontalMov * movSpeed;
-        var verticalVelocity = rb.velocity.y;
-        rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
+        var horizontalVelocity = _stickDirection * movSpeed;
+        var verticalVelocity = _rb.velocity.y;
+        _rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
     }
-    public void OnMove(InputValue val)
+    
+    public void OnStickMoved(InputAction.CallbackContext val )
     {
-        horizontalMov = val.Get<float>();
+        _stickDirection = val.ReadValue<float>();
         Debug.Log("Horizontal");
     }
 }

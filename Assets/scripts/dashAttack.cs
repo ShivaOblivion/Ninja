@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,7 +18,6 @@ public class dashAttack : MonoBehaviour
     void Dash()
     {
         rb.velocity = mousePosition * dashSpeed;
-        
     }
 
     void OnDash()

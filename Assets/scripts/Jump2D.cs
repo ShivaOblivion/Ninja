@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 
 public class Jump2D : MonoBehaviour
@@ -62,10 +57,6 @@ public class Jump2D : MonoBehaviour
         
     }
 
-    public void OnJump()
-    {
-        Jump();
-        Debug.Log("jump");
-    }
+   
 }
 

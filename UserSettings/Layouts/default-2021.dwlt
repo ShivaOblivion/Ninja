@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< Updated upstream
     x: 2249
     y: 302.5
     width: 1206
@@ -21,10 +22,41 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title:
   m_RootView: {fileID: 6}
+=======
+    x: 0
+    y: 43.2
+    width: 1536
+    height: 772.8
+  m_ShowMode: 4
+  m_Title: Console
+  m_RootView: {fileID: 3}
+>>>>>>> Stashed changes
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12060, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1536
+    height: 722.8
+  m_MinSize: {x: 100, y: 123}
+  m_MaxSize: {x: 4000, y: 4023}
+  m_ActualView: {fileID: 6}
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,6 +69,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier:
   m_Children:
+<<<<<<< Updated upstream
   - {fileID: 9}
   - {fileID: 3}
   m_Position:
@@ -50,6 +83,24 @@ MonoBehaviour:
   vertical: 0
   controlID: 119
 --- !u!114 &3
+=======
+  - {fileID: 4}
+  - {fileID: 2}
+  - {fileID: 5}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1536
+    height: 772.8
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &4
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,6 +117,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 921
     y: 0
+<<<<<<< Updated upstream
     width: 285
     height: 665
   m_MinSize: {x: 276, y: 71}
@@ -76,6 +128,14 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
+=======
+    width: 1536
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &5
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,6 +151,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< Updated upstream
     y: 0
     width: 228
     height: 394
@@ -128,6 +189,13 @@ MonoBehaviour:
   - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
+=======
+    y: 752.8
+    width: 1536
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,6 +205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< Updated upstream
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
   m_EditorClassIdentifier:
@@ -714,6 +783,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+=======
+>>>>>>> Stashed changes
   m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
   m_EditorClassIdentifier:
@@ -721,6 +792,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
+<<<<<<< Updated upstream
     m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip:
   m_Pos:
@@ -729,5 +801,15 @@ MonoBehaviour:
     y: 726.5
     width: 920
     height: 250
+=======
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73.6
+    width: 1536
+    height: 703.8
+>>>>>>> Stashed changes
   m_ViewDataDictionary: {fileID: 0}
 

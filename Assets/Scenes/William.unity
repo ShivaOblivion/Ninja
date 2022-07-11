@@ -180,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d69abaa4c6bf245a2bbbf4852f72fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   movSpeed: 10
 --- !u!212 &21299663
 SpriteRenderer:
@@ -263,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 6a4a579ba636eee46acd25833badc689, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -274,7 +273,71 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 52e33d15-0746-4539-a613-227812eafbb8
+    m_ActionName: Player/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 86612cee-4236-4b7c-80b0-ea4d7f567a16
+    m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91443450-96f8-4c1c-a56e-a366f4144463
+    m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 22f4f83f-6107-48b2-982b-9c126bd2b911
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb4fb283-7c06-4b61-a03b-d566848f97a4
+    m_ActionName: Player/Dash[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb9c2091-a76b-4aeb-989d-1c8a2fba26ac
+    m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a6e8c43-6045-4246-8cc7-eca67a3e4b10
+    m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c7ba928-2508-491e-bae4-beab36474d87
+    m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: acabdba7-3838-48a5-9bb4-92049455d019
+    m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b799ab2b-25a2-4d29-a05b-b5dcd0335f36
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a097e7b-6621-4a3f-9c44-2ad83386e7b8
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91362742-976a-4787-ac65-c46f8764246c
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e2dbd271-0cc8-4fbc-ad0f-07db65472794
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7af42bbd-9186-432a-a6ae-78c0ebecf565
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59c3e5c3-3daa-47b1-85bf-d21472906ff7
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 012a614a-2af5-4ebb-8fb3-1850eddc9485
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -344,8 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statTimeBtwAttack: 0.5
   attackPos: {fileID: 858283382}
-  attackRange: 0.76
-  damage: 0
+  attackRange: 0.84
+  damage: 1
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 0
@@ -926,7 +989,7 @@ GameObject:
   - component: {fileID: 1820051821}
   - component: {fileID: 1820051820}
   - component: {fileID: 1820051819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,8 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f203f3006190ce04ab1a5738ce4f6ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  enemy: {fileID: 0}
+  health: 0
 --- !u!61 &1820051820
 BoxCollider2D:
   m_ObjectHideFlags: 0
