@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,11 +18,26 @@ public class Move2D : MonoBehaviour
         var horizontalVelocity = _stickDirection * movSpeed;
         var verticalVelocity = _rb.velocity.y;
         _rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
+        
+        //filip direction
+        if (_rb.velocity.x>0)
+        {
+            transform.localScale=Vector3.one; 
+        }
+        else if(_rb.velocity.x<0)
+        {
+            transform.localScale =  new Vector3(-1f, 1, 1f);
+        }
+        
+        
+        
     }
-    
     public void OnStickMoved(InputAction.CallbackContext val )
     {
         _stickDirection = val.ReadValue<float>();
         Debug.Log("Horizontal");
     }
+    
+    
+    
 }

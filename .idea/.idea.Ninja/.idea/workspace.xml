@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/William.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/William.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +94,9 @@
       <workItem from="1657286713075" duration="2084000" />
       <workItem from="1657288931115" duration="784000" />
       <workItem from="1657549687008" duration="7652000" />
-      <workItem from="1657620703391" duration="484000" />
+      <workItem from="1657620703391" duration="2425000" />
+      <workItem from="1658145397121" duration="2906000" />
+      <workItem from="1658149791128" duration="1638000" />
     </task>
     <servers />
   </component>

@@ -32,6 +32,7 @@ public class Jump2D : MonoBehaviour
             rb2D.velocity = vel;
             jumpCount++;
             Debug.Log(2);
+            
         }
             
 
