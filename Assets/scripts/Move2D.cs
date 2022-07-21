@@ -1,5 +1,4 @@
-using System.Security.Cryptography;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +6,7 @@ public class Move2D : MonoBehaviour
 {
     private Rigidbody2D _rb;
     public float movSpeed;
-    private float _stickDirection;
+    public float stickDirection;
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -15,7 +14,7 @@ public class Move2D : MonoBehaviour
     
     void FixedUpdate()
     {
-        var horizontalVelocity = _stickDirection * movSpeed;
+        var horizontalVelocity = stickDirection * movSpeed;
         var verticalVelocity = _rb.velocity.y;
         _rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
         
@@ -34,7 +33,7 @@ public class Move2D : MonoBehaviour
     }
     public void OnStickMoved(InputAction.CallbackContext val )
     {
-        _stickDirection = val.ReadValue<float>();
+        stickDirection = val.ReadValue<float>();
         Debug.Log("Horizontal");
     }
     
