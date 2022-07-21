@@ -7,6 +7,7 @@ public class Move2D : MonoBehaviour
     private Rigidbody2D _rb;
     public float movSpeed;
     public float stickDirection;
+    public Jump2D jump2D;
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -28,7 +29,11 @@ public class Move2D : MonoBehaviour
             transform.localScale =  new Vector3(-1f, 1, 1f);
         }
         
-        
+        if (jump2D.isGrabbing)
+        {
+            
+            _rb.velocity = Vector2.zero;
+        } 
         
     }
     public void OnStickMoved(InputAction.CallbackContext val )
