@@ -11,19 +11,19 @@ public class PlayerAttack : MonoBehaviour
 
     public int damage;
     public LayerMask whatIsEnemies;
-
     private void Update()
     {
-        Debug.Log("ez");
-
-        Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-        for (int i = 0; i < enemiesToDamoge.Length; i++)
+        if (timeBtwAttack<=0)
         {
-            enemiesToDamoge[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+            
+                
+            timeBtwAttack = statTimeBtwAttack;
         }
-
-        timeBtwAttack = statTimeBtwAttack;
-        Debug.Log("ez1v9");
+        else
+        {
+            timeBtwAttack = statTimeBtwAttack;
+        }
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -32,5 +32,15 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
-   
+   public void Attack()
+    {
+        Debug.Log("test");
+        Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        for (int i = 0; i < enemiesToDamoge.Length; i++)
+        {
+            enemiesToDamoge[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+            Debug.Log("attack!!");
+                    
+        }
+    }
 }

@@ -30,11 +30,11 @@ public class Move2D : MonoBehaviour
         }
         
         if (jump2D.isGrabbing)
-        {
-            
+        { 
             _rb.velocity = Vector2.zero;
-        } 
+        }
         
+
     }
     public void OnStickMoved(InputAction.CallbackContext val )
     {

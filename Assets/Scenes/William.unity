@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516753758}
   - component: {fileID: 516753757}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sol1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,6 +668,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d69abaa4c6bf245a2bbbf4852f72fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1792100025 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8073983963703993765, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+  m_PrefabInstance: {fileID: 8073983963716379763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f94943251e2f644a1f5c467ada990e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1792100026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8073983963703993760, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+  m_PrefabInstance: {fileID: 8073983963716379763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7d81bd10e68014fa81619e4f16038e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1820051818
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f203f3006190ce04ab1a5738ce4f6ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
 --- !u!61 &1820051820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -916,8 +938,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1792100020}
     - target: {fileID: 8073983963703993760, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: jetJumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993760, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
       propertyPath: groundCheckRadius
       value: 0.584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993760, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: maskGround.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1792100025}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993761, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8073983963703993763, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
       propertyPath: m_RootOrder
@@ -963,6 +1021,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993765, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: attackRange
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993765, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: whatIsEnemies.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073983963703993789, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
+      propertyPath: jump2D
+      value: 
+      objectReference: {fileID: 1792100026}
     - target: {fileID: 8073983963703993791, guid: e137a0dba14d38c4681e90b18a73fb52, type: 3}
       propertyPath: m_Name
       value: HeavyBandit_0

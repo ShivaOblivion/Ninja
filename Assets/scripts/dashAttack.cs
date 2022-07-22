@@ -26,9 +26,5 @@ public class dashAttack : MonoBehaviour
         Debug.Log("Dash");
     }
 
-    public void OnmousePosition(InputAction.CallbackContext pos)
-    {
-        mousePosition = (pos.ReadValue<Vector2>());
-    }
-}
+   
 
