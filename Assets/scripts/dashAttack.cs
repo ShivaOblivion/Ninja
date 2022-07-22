@@ -29,13 +29,6 @@ public class dashAttack : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    
-    
-
-
-
-
     public IEnumerator Dash()
     {
         canDash = false;
@@ -50,21 +43,15 @@ public class dashAttack : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        
-
-
-
     }
 
     public void OnStickMoved(InputAction.CallbackContext val)
     {
         dashDirection = val.ReadValue<Vector2>();
         Debug.Log("dash");
-        
-
     }
 
-    void Dashin()
+    public void Dashin()
     {
         if (canDash)
         {
