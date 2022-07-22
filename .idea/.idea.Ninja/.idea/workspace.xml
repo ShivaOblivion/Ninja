@@ -7,10 +7,8 @@
     <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Ninja2.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Ninja2.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +99,7 @@
       <workItem from="1658149791128" duration="1638000" />
       <workItem from="1658238875095" duration="7966000" />
       <workItem from="1658409202578" duration="24116000" />
+      <workItem from="1658493213672" duration="2136000" />
     </task>
     <servers />
   </component>
