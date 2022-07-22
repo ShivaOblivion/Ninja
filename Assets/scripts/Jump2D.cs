@@ -5,8 +5,8 @@ public class Jump2D : MonoBehaviour
 {
     [Header("Jump")] public float jumpForce;
 
-    [Header("Detection")] [Range(0, 1)] public float groundCheckRadius;
-    [Range(0, 1)] public float wallCheckRadius;
+    [Header("Detection")] [Range(0, 5)] public float groundCheckRadius;
+    [Range(0, 5)] public float wallCheckRadius;
 
     public LayerMask maskGround;
     public LayerMask maskWall;
