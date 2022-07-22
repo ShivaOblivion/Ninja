@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class dashAttack : MonoBehaviour
 {
-    [SerializeField]
-    public Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     private Vector3 dashDirection;
     public float dashSpeed;
     private Vector3 mousePosition;
@@ -17,7 +16,7 @@ public class dashAttack : MonoBehaviour
 
     void Dash()
     {
-        rb.velocity = mousePosition * dashSpeed;
+        
     }
 
     void OnDash()
@@ -25,6 +24,7 @@ public class dashAttack : MonoBehaviour
         Dash();
         Debug.Log("Dash");
     }
+}
 
    
 
