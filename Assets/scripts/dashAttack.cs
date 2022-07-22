@@ -30,7 +30,8 @@ public class dashAttack : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
+    
+    
 
 
 
@@ -59,10 +60,18 @@ public class dashAttack : MonoBehaviour
     {
         dashDirection = val.ReadValue<Vector2>();
         Debug.Log("dash");
+        
 
     }
 
-
+    void Dashin()
+    {
+        if (canDash)
+        {
+            StartCoroutine(Dash());
+        }
+        
+    }
 }
 
    
