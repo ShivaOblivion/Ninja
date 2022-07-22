@@ -60,13 +60,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "New action",
-                    "type": "Button",
+                    "name": "ashDirection",
+                    "type": "Value",
                     "id": "b1377a38-99db-48ee-b6e6-907c7ffc7a56",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -205,11 +205,11 @@
                 {
                     "name": "",
                     "id": "eb19f89c-489b-4366-b838-d8537411ab1c",
-                    "path": "",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": "Gamepad",
+                    "action": "ashDirection",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
