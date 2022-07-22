@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,24 +8,56 @@ using UnityEngine.InputSystem;
 public class dashAttack : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D rb;
-    private Vector3 dashDirection;
+    private Vector2 dashDirection;
     public float dashSpeed;
-    private Vector3 mousePosition;
+    public Transform attackPos;
+
+    [Header("Range d'attaque")] [Range(0, 5)]
+    public float attackRange;
+
+    private bool canDash;
+    private bool isDashing;
+    private float dashingTime = .2f;
+    private float dashingCooldown;
+
+    public TrailRenderer tr;
+
+    public int damage;
+    public LayerMask whatIsEnemies;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void Dash()
+    public IEnumerator Dash()
     {
-        
+        canDash = false;
+        isDashing = true;
+        float originalgravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = dashDirection*dashSpeed;
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalgravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 
-    void OnDash()
+    public void OnStickMoved(InputAction.CallbackContext val)
     {
-        Dash();
-        Debug.Log("Dash");
+        dashDirection = val.ReadValue<Vector2>();
+        Debug.Log("dash");
+    }
+
+    public void Dashin()
+    {
+        if (canDash)
+        {
+            StartCoroutine(Dash());
+        }
+        
     }
 }
 
