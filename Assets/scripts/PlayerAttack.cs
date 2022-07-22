@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     public LayerMask whatIsEnemies;
 
-    private void Attack()
+    private void Update()
     {
         Debug.Log("ez");
 
@@ -32,8 +32,5 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
-    public void OnAttack()
-    {
-        Attack();
-    }
+   
 }

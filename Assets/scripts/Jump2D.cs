@@ -5,48 +5,70 @@ public class Jump2D : MonoBehaviour
 {
     [Header("Jump")] public float jumpForce;
 
-    [Header("Ground Detection")] [Range(0, 1)]
-    public float groundCheckRadius;
+    [Header("Detection")] [Range(0, 1)] public float groundCheckRadius;
+    [Range(0, 1)] public float wallCheckRadius;
 
-    public LayerMask mask;
+    public LayerMask maskGround;
+    public LayerMask maskWall;
     public Transform feet;
 
-    [SerializeField]
-    private Rigidbody2D rb2D;
-    private int jumpCount = 0;
+    [SerializeField] private Rigidbody2D rb2D;
+    private int _jumpCount;
     public bool isGrounded;
-    float JumpCoolDown;
-    private int extraJump=1;
+    float _jumpCoolDown;
+    private int extraJump = 2;
+    public bool canGrab, isGrabbing;
+    public Move2D mouv2D;
+    private float _gravityStore;
+    public float wallJumpTime = .2f;
+    private float _wallJumpCounter;
+    public float jetJumpForce;
+    public float wallJumpForce;
     private void Awake()
     {
-        rb2D= GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();
+        _gravityStore = rb2D.gravityScale;
     }
 
     public void Jump()
     {
-        
-        if (isGrounded || jumpCount < extraJump)
+        if (!isGrabbing)
         {
-            Vector2 vel = rb2D.velocity;
-            vel.y = jumpForce;
-            rb2D.velocity = vel;
-            jumpCount++;
-            Debug.Log(2);
+            if (isGrounded && _jumpCount < extraJump)
+            {
+                Vector2 vel = rb2D.velocity;
+                vel.y = jumpForce;
+                vel.x = mouv2D.stickDirection * mouv2D.movSpeed;
+                rb2D.velocity = vel;
+                _jumpCount++;
+                Debug.Log("Jump");
+            }
+            else if (_jumpCount < extraJump)
+            {
+                Vector2 vel = rb2D.velocity;
+                vel.y = jetJumpForce;
+                rb2D.velocity = vel;
+                Debug.Log("jetJump");
+                _jumpCount++;
+            }
+            else
+            {
+                Debug.Log("0");
+            }
         }
-            
-
     }
+
     private void Update()
     {
-        var test = Physics2D.OverlapCircle(feet.position, groundCheckRadius, mask);
+        var test = Physics2D.OverlapCircle(feet.position, groundCheckRadius, maskGround);
         isGrounded = test != null;
-        
-        if (isGrounded == true)
+
+        if (isGrounded || isGrabbing)
         {
-            jumpCount = 0;
-            JumpCoolDown = Time.time + 0.2f;
+            _jumpCount = 0;
+            _jumpCoolDown = Time.time + .2f;
         }
-        else if (Time.time< JumpCoolDown)
+        else if (Time.time < _jumpCoolDown)
         {
             isGrounded = true;
         }
@@ -54,9 +76,56 @@ public class Jump2D : MonoBehaviour
         {
             isGrounded = false;
         }
-        
+
+        //wall jump
+        if (_wallJumpCounter <= 0)
+        {
+
+
+            canGrab = Physics2D.OverlapCircle(feet.position, wallCheckRadius, maskWall);
+            isGrabbing = false;
+            if (canGrab && !isGrounded)
+            {
+                if ((transform.localScale.x == 1f && mouv2D.stickDirection > 0) ||
+                    (transform.localScale.x == -1f && mouv2D.stickDirection < 0))
+                {
+                    isGrabbing = true;
+                }
+
+            }
+
+            if (isGrabbing)
+            {
+                rb2D.gravityScale = 0f;
+                rb2D.velocity = Vector2.zero;
+            }
+            else
+            {
+                rb2D.gravityScale = _gravityStore;
+            }
+        }
+        else
+        {
+            _wallJumpCounter -= Time.deltaTime;
+        }
     }
 
-   
+    public void wallJump()
+    {
+        if (isGrabbing && _wallJumpCounter <= 0)
+        {
+            _wallJumpCounter = wallJumpTime;
+            rb2D.velocity = new Vector2(--mouv2D.stickDirection*mouv2D.movSpeed, wallJumpForce);
+            rb2D.gravityScale = _gravityStore;
+            isGrabbing = false;
+            Debug.Log("wallJump");
+
+
+        }
+    }
+
+
+
 }
+
 
