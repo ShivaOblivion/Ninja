@@ -9,6 +9,7 @@ public class Move2D : MonoBehaviour
     public float stickDirection;
     public Jump2D jump2D;
     public dashAttack dashAttack;
+    public Animator animator;
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -19,6 +20,8 @@ public class Move2D : MonoBehaviour
         var horizontalVelocity = stickDirection * movSpeed;
         var verticalVelocity = _rb.velocity.y;
         _rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalVelocity));
         
         //filip direction
         if (_rb.velocity.x>0)

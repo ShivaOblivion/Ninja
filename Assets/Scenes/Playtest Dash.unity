@@ -5841,7 +5841,8 @@ MonoBehaviour:
   movSpeed: 10
   stickDirection: 0
   jump2D: {fileID: 727122536}
-  dashAttack: {fileID: 0}
+  dashAttack: {fileID: 727122538}
+  animator: {fileID: 727122541}
 --- !u!50 &727122534
 Rigidbody2D:
   serializedVersion: 4
