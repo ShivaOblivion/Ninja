@@ -3159,7 +3159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5690212, y: -0.0013637543, z: -10}
+  m_LocalPosition: {x: -0.5329838, y: -0.0013618469, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5791,8 +5791,8 @@ MonoBehaviour:
     m_ActionName: Player/Jump
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 727122538}
-        m_TargetAssemblyTypeName: dashAttack, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DashAttack, Assembly-CSharp
         m_MethodName: Dashin
         m_Mode: 1
         m_Arguments:
@@ -5932,6 +5932,7 @@ MonoBehaviour:
   feet: {fileID: 727122531}
   rb2D: {fileID: 0}
   isGrounded: 0
+  dashAttack: {fileID: 727122538}
   canGrab: 0
   isGrabbing: 0
   mouv2D: {fileID: 727122533}
@@ -5978,8 +5979,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   dashSpeed: 30
-  attackPos: {fileID: 0}
+  attackPos: {fileID: 727122531}
   attackRange: 0
+  isDashing: 0
   tr: {fileID: 727122539}
   damage: 1
   whatIsEnemies:
@@ -49198,7 +49200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948931310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.116762, y: -2.4666357, z: 0}
+  m_LocalPosition: {x: -9.134781, y: -2.4666376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49235,7 +49237,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2027028, y: 1}
+    m_SensorSize: {x: 2.205706, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
