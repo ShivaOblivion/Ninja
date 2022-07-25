@@ -48,7 +48,7 @@ public class DashAttack : MonoBehaviour
     public void OnStickMoved(InputAction.CallbackContext val)
     {
         dashDirection = val.ReadValue<Vector2>();
-        Debug.Log("dash");
+       
     }
 
     public void Dashin()
@@ -56,6 +56,7 @@ public class DashAttack : MonoBehaviour
         if (canDash)
         {
             StartCoroutine(Dash());
+            Debug.Log("dash");
         }
         
     }
