@@ -17,6 +17,7 @@ public class Jump2D : MonoBehaviour
     public bool isGrounded;
     float _jumpCoolDown;
     private int extraJump = 2;
+    public DashAttack dashAttack;
     public bool canGrab, isGrabbing;
     public Move2D mouv2D;
     private float _gravityStore;
@@ -32,6 +33,10 @@ public class Jump2D : MonoBehaviour
 
     public void Jump()
     {
+        if (dashAttack.isDashing)
+        {
+            return;
+        }
         if (!isGrabbing)
         {
             if (isGrounded && _jumpCount < extraJump)

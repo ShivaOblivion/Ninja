@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class dashAttack : MonoBehaviour
+public class DashAttack : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D rb;
     private Vector2 dashDirection;
@@ -16,7 +16,7 @@ public class dashAttack : MonoBehaviour
     public float attackRange;
 
     private bool canDash;
-    private bool isDashing;
+    public bool isDashing;
     private float dashingTime = .2f;
     private float dashingCooldown;
 

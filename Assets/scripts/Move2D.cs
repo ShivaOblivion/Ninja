@@ -8,7 +8,7 @@ public class Move2D : MonoBehaviour
     public float movSpeed;
     public float stickDirection;
     public Jump2D jump2D;
-    public dashAttack dashAttack;
+    public DashAttack dashAttack;
     public Animator animator;
     void Awake()
     {
@@ -17,6 +17,10 @@ public class Move2D : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (dashAttack.isDashing)
+        {
+            return;
+        }
         var horizontalVelocity = stickDirection * movSpeed;
         var verticalVelocity = _rb.velocity.y;
         _rb.velocity = new Vector2(horizontalVelocity, verticalVelocity);
