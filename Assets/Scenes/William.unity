@@ -5284,6 +5284,7 @@ GameObject:
   - component: {fileID: 727122533}
   - component: {fileID: 727122532}
   - component: {fileID: 727122534}
+  - component: {fileID: 727122542}
   - component: {fileID: 727122536}
   - component: {fileID: 727122537}
   - component: {fileID: 727122539}
@@ -5775,6 +5776,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &727122542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727122529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64f77ebe5ecd1e4fb25eab2d427d6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  dashSpeed: 0
+  attackPos: {fileID: 0}
+  attackRange: 0
+  isDashing: 0
+  tr: {fileID: 0}
+  damage: 0
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &813167019
 GameObject:
   m_ObjectHideFlags: 0
