@@ -10,7 +10,8 @@ public class Jump2D : MonoBehaviour
 
     public LayerMask maskGround;
     public LayerMask maskWall;
-    public Transform feet;
+    public Transform feetGroud;
+    public Transform FeetWall;
 
     [SerializeField] private Rigidbody2D rb2D;
     private int _jumpCount;
@@ -25,6 +26,7 @@ public class Jump2D : MonoBehaviour
     private float _wallJumpCounter;
     public float jetJumpForce;
     public float wallJumpForce;
+    
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -65,7 +67,7 @@ public class Jump2D : MonoBehaviour
 
     private void Update()
     {
-        var test = Physics2D.OverlapCircle(feet.position, groundCheckRadius, maskGround);
+        var test = Physics2D.OverlapCircle(feetGroud.position, groundCheckRadius, maskGround);
         isGrounded = test != null;
 
         if (isGrounded || isGrabbing)
@@ -87,7 +89,7 @@ public class Jump2D : MonoBehaviour
         {
 
 
-            canGrab = Physics2D.OverlapCircle(feet.position, wallCheckRadius, maskWall);
+            canGrab = Physics2D.OverlapCircle(FeetWall.position, wallCheckRadius, maskWall);
             isGrabbing = false;
             if (canGrab && !isGrounded)
             {
