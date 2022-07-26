@@ -1,11 +1,9 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-public class DashAttack : MonoBehaviour
+public class Dash : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D rb;
     private Vector2 dashDirection;
@@ -30,7 +28,7 @@ public class DashAttack : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         canDash = true;
     }
-    public IEnumerator Dash()
+    public IEnumerator DashAtt()
     {
         canDash = false;
         isDashing = true;
@@ -57,11 +55,8 @@ public class DashAttack : MonoBehaviour
         if (canDash)
         {
             Debug.Log("dash");
-            StartCoroutine(Dash());
+            StartCoroutine(DashAtt());
         }
         
     }
 }
-
-   
-
