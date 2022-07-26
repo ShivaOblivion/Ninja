@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Dash.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <workItem from="1658763278106" duration="596000" />
       <workItem from="1658850934102" duration="1816000" />
       <workItem from="1658855078596" duration="4660000" />
-      <workItem from="1658863849463" duration="625000" />
+      <workItem from="1658863849463" duration="1886000" />
     </task>
     <servers />
   </component>
