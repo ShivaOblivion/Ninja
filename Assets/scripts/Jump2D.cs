@@ -17,7 +17,7 @@ public class Jump2D : MonoBehaviour
     public bool isGrounded;
     float _jumpCoolDown;
     private int extraJump = 2;
-    public DashAttack dashAttack;
+    public Dash dashAttack;
     public bool canGrab, isGrabbing;
     public Move2D mouv2D;
     private float _gravityStore;

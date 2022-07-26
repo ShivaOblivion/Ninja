@@ -8,7 +8,7 @@ public class Move2D : MonoBehaviour
     public float movSpeed;
     public float stickDirection;
     public Jump2D jump2D;
-    public DashAttack dashAttack;
+    public Dash dashAttack;
     public Animator animator;
     void Awake()
     {

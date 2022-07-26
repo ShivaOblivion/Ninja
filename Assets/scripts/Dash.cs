@@ -54,8 +54,8 @@ public class Dash : MonoBehaviour
     {
         if (canDash)
         {
-            Debug.Log("dash");
             StartCoroutine(DashAtt());
+            Debug.Log("dash");
         }
         
     }
