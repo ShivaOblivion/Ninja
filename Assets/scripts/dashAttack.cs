@@ -28,6 +28,7 @@ public class DashAttack : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        canDash = true;
     }
     public IEnumerator Dash()
     {
