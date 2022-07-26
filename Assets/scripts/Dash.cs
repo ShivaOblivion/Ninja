@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,23 @@ public class Dash : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         canDash = true;
     }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+
+
+            Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            for (int i = 0; i < enemiesToDamoge.Length; i++)
+            {
+                enemiesToDamoge[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                Debug.Log("attack!!");
+
+            }
+        }
+    }
+
     public IEnumerator DashAtt()
     {
         canDash = false;
@@ -58,5 +76,10 @@ public class Dash : MonoBehaviour
             Debug.Log("dash");
         }
         
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 }
