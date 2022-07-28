@@ -10,6 +10,7 @@ public class Dash : MonoBehaviour
     private Vector2 dashDirection;
     public float dashSpeed;
     public Transform attackPos;
+    public Animator animator;
 
     [Header("Range d'attaque")] [Range(0, 5)]
     public float attackRange;
@@ -43,6 +44,10 @@ public class Dash : MonoBehaviour
                 Debug.Log("attack!!");
 
             }
+            animator.SetBool("IsDashin2", true);
+        } else
+        {
+            animator.SetBool("IsDashin2", false);
         }
     }
 
@@ -60,6 +65,7 @@ public class Dash : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        
     }
 
     public void OnStickMoved(InputAction.CallbackContext val)
