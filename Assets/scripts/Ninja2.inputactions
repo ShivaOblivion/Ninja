@@ -173,7 +173,7 @@
                     "name": "",
                     "id": "5e7dcc1a-1b7c-4715-b409-f60d808c8d99",
                     "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Dash",
