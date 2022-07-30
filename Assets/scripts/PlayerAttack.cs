@@ -6,7 +6,9 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float statTimeBtwAttack;
     public Transform attackPos;
-    private bool isAttacknig;
+    public bool isAttacknig;
+    public Animator animator;
+
 
     [Header("Range d'attaque")] [Range(0, 5)]
     public float attackRange;
@@ -18,11 +20,11 @@ public class PlayerAttack : MonoBehaviour
     {
         if (isAttacknig)
         {
-            
+            animator.SetBool("IsAttackin", true);
         }
         else
         {
-            
+            animator.SetBool("IsAttackin", false);    
         }
     }
 
@@ -49,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
 
    public void Attack()
    {
-       isAttacknig = true;
+        isAttacknig = true;
         Debug.Log("test");
         Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamoge.Length; i++)
