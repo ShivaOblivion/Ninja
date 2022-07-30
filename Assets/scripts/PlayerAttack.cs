@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -5,12 +6,26 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float statTimeBtwAttack;
     public Transform attackPos;
+    private bool isAttacknig;
 
     [Header("Range d'attaque")] [Range(0, 5)]
     public float attackRange;
 
     public int damage;
     public LayerMask whatIsEnemies;
+
+    private void FixedUpdate()
+    {
+        if (isAttacknig)
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
+
     private void Update()
     {
         if (timeBtwAttack<=0)
@@ -33,7 +48,8 @@ public class PlayerAttack : MonoBehaviour
     }
 
    public void Attack()
-    {
+   {
+       isAttacknig = true;
         Debug.Log("test");
         Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamoge.Length; i++)
@@ -42,5 +58,6 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("attack!!");
                     
         }
-    }
+        isAttacknig = false;
+   }
 }
