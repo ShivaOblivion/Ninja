@@ -3159,7 +3159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5682907, y: -0.0013637543, z: -10}
+  m_LocalPosition: {x: -3.3966293, y: -0.0014762878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7298,6 +7298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e5ca3ff97894945bf64294b15f39df, type: 3}
+--- !u!95 &1080002521 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7658737266687428441, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+  m_PrefabInstance: {fileID: 7658737266329929012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1211416319
 GameObject:
   m_ObjectHideFlags: 0
@@ -48342,7 +48347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948931310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.117493, y: -2.4666357, z: 0}
+  m_LocalPosition: {x: -7.7033234, y: -2.4665232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48379,7 +48384,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2027028, y: 1}
+    m_SensorSize: {x: 1.9670079, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -48517,5 +48522,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428440, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1080002521}
+    - target: {fileID: 7658737266687428440, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: statTimeBtwAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428442, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1080002521}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}

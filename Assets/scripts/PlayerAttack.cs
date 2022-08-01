@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -6,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float statTimeBtwAttack;
     public Transform attackPos;
-    public bool isAttacknig;
+    public bool isAttackni;
     public Animator animator;
 
 
@@ -18,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isAttacknig)
+        if (isAttackni)
         {
             animator.SetBool("IsAttackin", true);
         }
@@ -51,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
 
    public void Attack()
    {
-        isAttacknig = true;
+       isAttackni = true;
         Debug.Log("test");
         Collider2D[] enemiesToDamoge = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamoge.Length; i++)
@@ -60,6 +61,13 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("attack!!");
                     
         }
-        isAttacknig = false;
+        StartCoroutine(Att());
+       
+   }
+
+   public IEnumerator Att()
+   {
+       yield return new WaitForSeconds(.2F);
+       isAttackni = false;
    }
 }
