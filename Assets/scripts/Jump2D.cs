@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 
 public class Jump2D : MonoBehaviour
@@ -25,6 +26,7 @@ public class Jump2D : MonoBehaviour
     private float _wallJumpCounter;
     public float jetJumpForce;
     public float wallJumpForce;
+    public bool iswallJumping;
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -36,8 +38,9 @@ public class Jump2D : MonoBehaviour
         if (dashAttack.isDashing)
         {
             return;
+            
         }
-        if (!isGrabbing)
+        if (!isGrabbing && !iswallJumping)
         {
             if (isGrounded && _jumpCount < extraJump)
             {
@@ -119,17 +122,25 @@ public class Jump2D : MonoBehaviour
     {
         if (isGrabbing && _wallJumpCounter <= 0)
         {
+            StartCoroutine(wallJumping());
             _wallJumpCounter = wallJumpTime;
-            rb2D.velocity = new Vector2(--mouv2D.stickDirection*mouv2D.movSpeed, wallJumpForce);
+            rb2D.velocity = new Vector2(-mouv2D.stickDirection*20, wallJumpForce);
             rb2D.gravityScale = _gravityStore;
             isGrabbing = false;
             Debug.Log("wallJump");
+            
 
 
         }
+        
     }
 
-
+    public IEnumerator wallJumping()
+    {
+        iswallJumping = true;
+        yield return new WaitForSeconds(.2f);
+        iswallJumping = false;
+    }
 
 }
 

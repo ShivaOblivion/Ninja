@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 
 public class Move2D : MonoBehaviour
@@ -10,6 +11,7 @@ public class Move2D : MonoBehaviour
     public Jump2D jump2D;
     public Dash dashAttack;
     public Animator animator;
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -17,6 +19,11 @@ public class Move2D : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (jump2D.iswallJumping)
+        {
+            return;
+            
+        }
         if (dashAttack.isDashing)
         {
             return;
