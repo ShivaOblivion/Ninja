@@ -25,7 +25,8 @@ public class Jump2D : MonoBehaviour
     public float wallJumpTime = .2f;
     private float _wallJumpCounter;
     public float jetJumpForce;
-    public float wallJumpForce;
+    public float wallJumpForceX;
+    public float wallJumpForceY;
     public bool iswallJumping;
     private void Awake()
     {
@@ -124,7 +125,7 @@ public class Jump2D : MonoBehaviour
         {
             StartCoroutine(wallJumping());
             _wallJumpCounter = wallJumpTime;
-            rb2D.velocity = new Vector2(-mouv2D.stickDirection*20, wallJumpForce);
+            rb2D.velocity = new Vector2(-mouv2D.stickDirection*wallJumpForceX, wallJumpForceY);
             rb2D.gravityScale = _gravityStore;
             isGrabbing = false;
             Debug.Log("wallJump");

@@ -48589,5 +48589,13 @@ PrefabInstance:
       propertyPath: wallJumpForce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428444, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: wallJumpForceX
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428444, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: wallJumpForceY
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
