@@ -17,6 +17,19 @@ public class EnemyIA : MonoBehaviour
    public float rangeDist = 5f;
    private bool canAttack = true;
    private Transform attackCheck;
+   private Animator anim;
    public float dmgValue = 1;
 
+   void Awake()
+   {
+      rb2d = GetComponent<Rigidbody2D>();
+       anim= GetComponent<Animator>();
+   }  
+   
+   
+   
+   
+   
+   
+   
 }

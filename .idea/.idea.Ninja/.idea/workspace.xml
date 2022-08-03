@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="be77e9e1-d6f2-4548-b24b-ef9339628a67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ninja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/William.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/William.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/EnemyIA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/EnemyIA.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Jump2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Move2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/dashAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,12 +21,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Enemies/Ally.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Enemies/Ally.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Enemies/ThrowableProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../My project/Assets/MetroidvaniaController/Scripts/Player/ThrowableWeapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/Jump2DTest2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/WallJump.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,6 +120,8 @@
       <workItem from="1659377408367" duration="2814000" />
       <workItem from="1659448430688" duration="4672000" />
       <workItem from="1659454229875" duration="2718000" />
+      <workItem from="1659481452817" duration="1380000" />
+      <workItem from="1659524718928" duration="3014000" />
     </task>
     <servers />
   </component>

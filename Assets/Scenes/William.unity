@@ -48582,9 +48582,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7658737266687428442, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428442, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1080002521}
+    - target: {fileID: 7658737266687428442, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: dashSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658737266687428442, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
+      propertyPath: whatIsEnemies.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7658737266687428444, guid: 1ca3a23dd104f01498243f7c1e9de569, type: 3}
       propertyPath: wallJumpForce
       value: 30

@@ -11,6 +11,7 @@ public class Move2D : MonoBehaviour
     public Jump2D jump2D;
     public Dash dashAttack;
     public Animator animator;
+    public WallJump wallJump;
     
     void Awake()
     {
@@ -19,7 +20,7 @@ public class Move2D : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (jump2D.iswallJumping)
+        if (wallJump.iswallJumping)
         {
             return;
             
@@ -44,7 +45,7 @@ public class Move2D : MonoBehaviour
             transform.localScale =  new Vector3(-1f, 1, 1f);
         }
         
-        if (jump2D.isGrabbing)
+        if (wallJump.isGrabbing)
         { 
             _rb.velocity = Vector2.zero;
         }
