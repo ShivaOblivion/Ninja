@@ -216,7 +216,7 @@
                     "id": "eb19f89c-489b-4366-b838-d8537411ab1c",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "NormalizeVector2",
                     "groups": "Gamepad",
                     "action": "DashDirection",
                     "isComposite": false,
