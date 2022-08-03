@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7658737266687428439}
   - component: {fileID: 7658737266687428444}
+  - component: {fileID: 5385663700177679516}
   - component: {fileID: 7658737266687428433}
   - component: {fileID: 7658737266687428442}
   - component: {fileID: 7658737266687428438}
@@ -87,23 +88,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 25
   groundCheckRadius: 1.54
-  wallCheckRadius: 0.54
   maskGround:
     serializedVersion: 2
     m_Bits: 8
-  maskWall:
-    serializedVersion: 2
-    m_Bits: 128
   feet: {fileID: 7658737266687428439}
   rb2D: {fileID: 0}
   isGrounded: 0
   dashAttack: {fileID: 7658737266687428442}
+  mouv2D: {fileID: 7658737266687428433}
+  jetJumpForce: 25
+  wallJump: {fileID: 0}
+--- !u!114 &5385663700177679516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7658737266687428437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7663dc047b3838a41bd12df425a8eb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   canGrab: 0
   isGrabbing: 0
-  mouv2D: {fileID: 7658737266687428433}
   wallJumpTime: 0.2
-  jetJumpForce: 25
-  wallJumpForce: 10
+  wallJumpForceX: 0
+  wallJumpForceY: 0
+  iswallJumping: 0
+  rb2D: {fileID: 0}
+  mouv2D: {fileID: 0}
+  feet: {fileID: 0}
+  maskWall:
+    serializedVersion: 2
+    m_Bits: 128
+  wallCheckRadius: 0
+  jump2D: {fileID: 0}
 --- !u!114 &7658737266687428433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +141,7 @@ MonoBehaviour:
   jump2D: {fileID: 7658737266687428444}
   dashAttack: {fileID: 7658737266687428442}
   animator: {fileID: 7658737266687428441}
+  wallJump: {fileID: 0}
 --- !u!114 &7658737266687428442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +157,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   dashSpeed: 500
   attackPos: {fileID: 7658737266687428439}
+  animator: {fileID: 0}
   attackRange: 0
   isDashing: 0
   tr: {fileID: 7658737266687428447}
@@ -348,6 +370,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b1377a38-99db-48ee-b6e6-907c7ffc7a56
     m_ActionName: Player/ashDirection[/DualSenseGamepadHID/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 590ecf71-b019-4419-8446-9d5cb9be705e
+    m_ActionName: Player/wallJump[/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -522,6 +548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statTimeBtwAttack: 0
   attackPos: {fileID: 7658737266687428439}
+  isAttackni: 0
+  animator: {fileID: 0}
   attackRange: 0.98
   damage: 1
   whatIsEnemies:

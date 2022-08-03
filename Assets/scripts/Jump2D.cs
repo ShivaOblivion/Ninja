@@ -22,6 +22,7 @@ public class Jump2D : MonoBehaviour
     public Move2D mouv2D;
     public float jetJumpForce;
     public WallJump wallJump;
+    public bool isJumping;
     
     
     
@@ -48,6 +49,7 @@ public class Jump2D : MonoBehaviour
                 rb2D.velocity = vel;
                 _jumpCount++;
                 Debug.Log("Jump");
+                StartCoroutine(Jumping());
             }
             else if (_jumpCount < extraJump)
             {
@@ -56,6 +58,7 @@ public class Jump2D : MonoBehaviour
                 rb2D.velocity = vel;
                 Debug.Log("jetJump");
                 _jumpCount++;
+                StartCoroutine(Jumping());
             }
             else
             {
@@ -66,6 +69,26 @@ public class Jump2D : MonoBehaviour
 
     private void Update()
     {
+        if (isGrounded)
+        {
+            
+        }
+        else
+        {
+            
+        }
+
+        if (isJumping)
+        {
+            
+        }
+        else
+        {
+            
+        }
+        
+        
+        
         var test = Physics2D.OverlapCircle(feet.position, groundCheckRadius, maskGround);
         isGrounded = test != null;
 
@@ -84,6 +107,12 @@ public class Jump2D : MonoBehaviour
         }
         
 
+    }
+    public IEnumerator Jumping()
+    {
+        isJumping = true;
+        yield return new WaitForSeconds(.2f);
+        isJumping = false;
     }
 }
 
