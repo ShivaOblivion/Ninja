@@ -98,6 +98,7 @@ MonoBehaviour:
   mouv2D: {fileID: 7658737266687428433}
   jetJumpForce: 25
   wallJump: {fileID: 0}
+  isJumping: 0
 --- !u!114 &5385663700177679516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29a42a7ff28e48242b76b8b67e1e7e90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf1bf845169cc1e4d9519d6bb13d9913, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -391,7 +392,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 3.991104
+  m_Mass: 3.9482043
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 6
@@ -413,18 +414,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3293867, y: 0.012144089}
+  m_Offset: {x: -0.3293867, y: 0.02813673}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0.6875, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 3}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.6784414, y: 0.4978167}
+    oldSize: {x: 1.34375, y: 2.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3412266, y: 2.9757118}
+  m_Size: {x: 1.3412266, y: 2.9437265}
   m_EdgeRadius: 0
 --- !u!96 &7658737266687428447
 TrailRenderer:
