@@ -119,11 +119,12 @@ public class EnemyIA : MonoBehaviour
 			Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, rangeTargeting);
 			foreach (Collider2D collider2D in colliderArray)
 			{
+				/*
 				if (col
 				 {
 
 				}
-
+				*/
 			}
 		}
 
@@ -152,7 +153,7 @@ public class EnemyIA : MonoBehaviour
 			float direction = damage / Mathf.Abs(damage);
 			damage = Mathf.Abs(damage);
 			anim.SetBool("Hit", true);
-			enemyHealth.health -= damage;
+			//enemyHealth.health -= damage;
 			transform.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			transform.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 300f, 100f));
 			StartCoroutine(HitTime());
@@ -167,7 +168,7 @@ public class EnemyIA : MonoBehaviour
 		{
 			if (collidersEnemies[i].gameObject.tag == "Enemy")
 			{
-				collidersEnemies[i].gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+				//collidersEnemies[i].gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
 			}
 		}
 		StartCoroutine(WaitToAttack(0.5f));
