@@ -159,7 +159,7 @@ MonoBehaviour:
   dashSpeed: 50
   attackPos: {fileID: 7658737266687428439}
   animator: {fileID: 7658737266687428441}
-  attackRange: 1.5
+  attackRange: 3
   isDashing: 0
   tr: {fileID: 7658737266687428447}
   damage: 1
@@ -563,7 +563,7 @@ MonoBehaviour:
   attackPos: {fileID: 7658737266687428439}
   isAttackni: 0
   animator: {fileID: 7658737266687428441}
-  attackRange: 1
+  attackRange: 2
   damage: 1
   whatIsEnemies:
     serializedVersion: 2
