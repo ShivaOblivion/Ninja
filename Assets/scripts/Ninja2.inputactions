@@ -171,7 +171,7 @@
                     "name": "",
                     "id": "511104bd-c45d-4783-be21-e837b7cb30ae",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Tap",
+                    "interactions": "Tap,MultiTap(tapCount=1)",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Jump",
